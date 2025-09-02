@@ -18,16 +18,16 @@ while opcao != 4:
         cadastrar_pet()
         ls()
     
-    if opcao == 2:
+    elif opcao == 2:
         ls()
         print('Lista de Pets cadastrados.')
 
-    if opcao == 3:
+    elif opcao == 3:
         ls()
         print('Atualização de Pets cadastrados.')
 
     #opcao de saida
-    if opcao == 4:
+    elif opcao == 4:
         print('Até mais, volte sempre!')
         ls()
 

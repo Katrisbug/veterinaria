@@ -1,5 +1,8 @@
+class Animal:
+    pass
+
 #template cachorro
-class Cachorro:
+class Cachorro(Animal):
     def __init__(self, nome, peso, especie, raca, idade, cor, nome_dono, telefone_dono):
         self.__nome = nome
         self.__peso = peso
@@ -11,7 +14,7 @@ class Cachorro:
         self.__telefone_dono = telefone_dono
 
 #template gato
-class Gato: 
+class Gato(Animal): 
     def __init__(self, nome, peso, especie, raca, idade, cor, nome_dono, telefone_dono):
         self.__nome = nome
         self.__peso = peso
@@ -23,7 +26,7 @@ class Gato:
         self.__telefone_dono = telefone_dono
 
 #template peixe
-class Peixe:
+class Peixe(Animal):
     def __init__(self, nome, peso, especie, raca, idade, cor, nome_dono, telefone_dono):
         self.__nome = nome
         self.__peso = peso
