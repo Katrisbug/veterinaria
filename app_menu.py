@@ -1,8 +1,8 @@
 import os
 from vet import*
 
-# Lista para armazenar os pets
-pets = []
+vet_animals = Veterinaria (' Veterinaria')
+
 
 # Menu principal
 def menu():
@@ -25,6 +25,7 @@ def cadastrar_pet():
         print("Espécie inválida.")
         return
 
+    vet_animals.cadastrar_pet(pets)
     peso = float(input("Peso: "))
     raca = input("Raça: ")
     idade = int(input("Idade: "))
@@ -46,3 +47,7 @@ def cadastrar_pet():
 
     pets.append(pet)
     print("Pet cadastrado com sucesso!")
+
+def listar_pets():
+    for chave, valor in vet_animals.listar().items():
+        print(f'ID: {chave}\t Nome: {valor.getNome()}')

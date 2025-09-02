@@ -1,3 +1,6 @@
+# Lista para armazenar os pets
+pets = []
+
 class Animal:
     def __init__(self, nome, peso, especie, idade, cor, nome_dono, telefone_dono):
         self.__nome = nome
@@ -10,29 +13,21 @@ class Animal:
         self.__armazenamento = {}
         self.__id = 0
 
-    def cadastrar_pet():
-        # Criando o dicionário do pet
-        pet = {
-            "nome": nome,
-            "especie": especie,
-            "peso": peso,
-            "raca": raca,
-            "idade": idade,
-            "cor": cor,
-            "nome_dono": nome_dono,
-            "telefone_dono": telefone_dono
-        }
-
-        pets.append(pet)
-        
+    def cadastrar_pet(self):
         self.__id += 1
-        self.__armazenamento[self.__id] = pet
+        self.__armazenamento[self.__id] = pets
+
+    def listar(self):
+        return self.__armazenamento
 
 #template cachorro
 class Cachorro(Animal):
     def __init__(self, raca):
         self.__raca = raca
 
+    def getNome(self):
+        return self.__nome
+    
 #template gato
 class Gato(Animal): 
     def __init__(self, raca):
@@ -40,4 +35,5 @@ class Gato(Animal):
 
 #template peixe
 class Peixe(Animal):
-    def __init__(self):
+    def __init__(self, nadadeiras):
+        self.__nadadeiras = nadadeiras

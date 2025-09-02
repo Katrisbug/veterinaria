@@ -1,8 +1,6 @@
 from app_menu import *
 from vet import*
 
-# Lista para armazenar todos os pets
-pets = []
 
 #menu
 menu()
